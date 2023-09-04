@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.logo {
+  padding: 10px;
+}
+.header {
+  margin: 10%;
+  margin-left: 10%;
+  margin-right: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Main */
+
+.padel {
+  margin: 10%;
+}
+
+.padel p {
+  color: #232c50;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.contact {
+  color: #fff;
+  background-color: #8b48bf;
+  border-radius: 50px;
+  padding: 10px;
+  width: 130px;
+  height: 45px;
+  text-align: center;
+}
+
+.textoPadel {
+  font-family: "Be Vietnam", sans-serif;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.different {
+  font-family: "Be Vietnam", sans-serif;
+  color: #fff;
+  background-color: #3cddf3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 15px;
+  margin: 30px auto;
+}
+
+.different h2 {
+  font-size: 36px;
+}
+
+.different p {
+  font-size: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Be Vietnam", sans-serif;
+}
+.list p {
+  color: #b3b2b7;
+  margin: 40px 10%;
+}
+.list .tituloLista {
+  width: 90%;
+  font-weight: bold;
+  color: #323851;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #8b48bf4d;
+}
+
+.numLista {
+  color: #fff;
+  background-color: #8b48bf;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin-right: 15px;
+}
+
+.best {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 40px;
+  background-color: #3cddf3;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  gap: 10px;
+}
+
+.best div {
+  background-color: #232c50;
+  border-radius: 50px;
+  padding: 10px 40px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.bestMonth {
+  font-family: "Be Vietnam", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.bestMonth h2 {
+  color: #242e53;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.bestMonth h3 {
+  color: #3f4868;
+  font-size: 16px;
+  margin: 20px auto;
+}
+
+.bestMonth p {
+  color: #b9b9c1;
+}
+
+.bestMonth div {
+  color: #fff;
+  background-color: #8b48bf;
+  padding: 10px 40px;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+/* Footer */
+
+.footer {
+  font-family: "Be Vietnam", sans-serif;
+  background-color: #1e1e26;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  color: #8c8c94;
+  margin: 25px auto;
+}
+
+/* Estilos para el input y el botón */
+input[type="text"],
+h6 {
+  margin: 10px 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.form .input {
+  color: #a0a0a0;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 10px 0px;
+  padding-left: 10px;
+  padding-right: 150px;
+}
+
+.form .go {
+  color: #fff;
+  background-color: #8b48bf;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.enlaces {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilos para las redes y los íconos sociales */
+.redes {
+  font-size: 16px;
+  height: 120px;
+  align-items: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20px; /* Espacio superior entre las redes y los elementos anteriores */
+}
+
+.redes a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px; /* Espacio entre los enlaces */
+}
+
+.redesSociales {
+  margin: 20px auto;
+}
+.redesSociales a {
+  color: #fff;
+  text-decoration: none;
+  margin: auto 35px;
+}
+
+/* Estilos para el logo y el texto de derechos de autor */
+img {
+  margin-top: 20px; /* Espacio superior entre el logo y los elementos anteriores */
+}
+
+p {
+  margin-top: 10px; /* Espacio superior entre el texto de derechos de autor y los elementos anteriores */
+}
