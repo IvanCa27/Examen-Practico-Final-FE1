@@ -6,14 +6,18 @@
   box-sizing: border-box;
 }
 .logo {
-  padding: 10px;
-}
-.header {
   margin: 10%;
   margin-left: 10%;
   margin-right: 8%;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo img {
+  margin-bottom: 3%;
 }
 
 /* Main */
@@ -86,7 +90,7 @@
   align-items: center;
   background-color: #8b48bf4d;
   border-bottom-left-radius: 25px;
-  border-top-left-radius: 25px; 
+  border-top-left-radius: 25px;
 }
 
 .numLista {
@@ -170,7 +174,8 @@
 }
 
 /* Estilos para el input y el botón */
-input[type="text"], h6 {
+input[type="text"],
+h6 {
   margin: 10px 0;
 }
 
@@ -238,16 +243,35 @@ p {
   margin-top: 10px; /* Espacio superior entre el texto de derechos de autor y los elementos anteriores */
 }
 
+/* Estilos para pantallas chicas*/
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+}
+
 /* Estilos para pantallas grandes, como PC */
 @media (min-width: 768px) {
-  .mobile-nav {
-    display: none; /* Oculta el icono de hamburguesa en pantallas grandes */
+  .hamburger {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
   }
 
-  /* Estilos para los elementos adicionales en el encabezado de pantalla grande */
-  .desktop-nav {
-    /* Estilos para el menú de pantalla grande */
-    display: flex;
-    
+  .desktop-nav a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+
+  .contact {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
