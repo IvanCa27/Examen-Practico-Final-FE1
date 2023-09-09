@@ -5,6 +5,49 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@keyframes miAnimacion {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes miAnimacion2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes vibrar {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .logo {
   margin: 10%;
   margin-left: 10%;
@@ -47,6 +90,7 @@
   border-radius: 50px;
   padding: 10px;
   width: 130px;
+  cursor: pointer;
   /* height:45px; */
   text-align: center;
   align-items: center;
@@ -59,6 +103,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
+  animation: miAnimacion 3s ease-in-out infinite;
 }
 
 .different {
@@ -92,6 +137,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  animation: miAnimacion 3s ease-in-out infinite;
 }
 
 .list p {
@@ -159,6 +205,7 @@
   padding: 10px 40px;
   margin-top: 50px;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .best {
@@ -181,6 +228,10 @@
   padding: 10px 40px;
   font-size: 14px;
   margin-top: 30px;
+  cursor: pointer;
+}
+.best div:hover {
+  animation: vibrar 0.3s ease infinite;
 }
 
 .elemento-clicable {
@@ -194,14 +245,22 @@
   background-color: #1e1e26;
   color: #fff;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+}
+.mainFooter {
+  display: flex;
+  flex-direction: column;
+  font-family: "Be Vietnam", sans-serif;
+  background-color: #1e1e26;
+  height: 80vh;
 }
 
 .footer p {
   color: #8c8c94;
   margin: 25px auto;
+  margin-left: 90%;
 }
 
 /* Estilos para el input y el botón */
@@ -213,6 +272,7 @@ h6 {
 .form {
   display: flex;
   align-items: center;
+  order: -1;
   padding: 10px;
   margin: 20px 10px;
 }
@@ -226,6 +286,10 @@ h6 {
   padding-right: 150px;
   border: none;
 }
+.form .input::placeholder {
+  color: #999;
+  font-style: italic;
+}
 
 .form .go {
   color: #fff;
@@ -234,23 +298,29 @@ h6 {
   padding: 10px 20px;
   margin-left: 10px;
   border: none;
+  cursor: pointer;
 }
 
 .enlaces {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   cursor: pointer;
+}
+.enlaces a:hover {
+  color: #8b48bf;
 }
 
 /* Estilos para las redes y los íconos sociales */
 .redes {
   font-size: 16px;
+  width: 60vw;
   height: 120px;
   align-items: space-evenly;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 20px; /* Espacio superior entre las redes y los elementos anteriores */
+  margin-top: 4px; /* Espacio superior entre las redes y los elementos anteriores */
 }
 
 .redes a {
@@ -261,10 +331,12 @@ h6 {
 }
 
 .redesSociales {
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column-reverse;
   justify-content: center;
-  margin: 20px auto;
+  margin: auto auto;
 }
 
 .redesSociales a {
@@ -275,7 +347,7 @@ h6 {
 }
 
 /* Estilos para el logo y el texto de derechos de autor */
-.footer-desktop .substract {
+.footer-desktop .redesSociales .substract {
   /* fill: red; */
   margin-top: 20px; /* Espacio superior entre el logo y los elementos anteriores */
   display: flex;
@@ -286,8 +358,17 @@ h6 {
   /* filter: invert(1) brightness(100); */
 }
 
-.footer p {
-  margin-top: 20px; /* Espacio superior entre el texto de derechos de autor y los elementos anteriores */
+.mainFooter p {
+  margin-top: 10px;
+  margin-left: 30%; /* Espacio superior entre el texto de derechos de autor y los elementos anteriores */
+}
+
+.mainFooter {
+  display: flex;
+  flex-direction: column;
+  font-family: "Be Vietnam", sans-serif;
+  background-color: #1e1e26;
+  height: 60vh;
 }
 
 /*Media Queries*/
@@ -303,16 +384,9 @@ h6 {
   .tenistasDesaparecidos {
     display: none;
   }
-  .mainFooter {
-    display: flex;
-    flex-direction: column;
-    font-family: "Be Vietnam", sans-serif;
-    background-color: #1e1e26;
-    height: 60vh;
-  }
   .footer {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 
@@ -419,11 +493,6 @@ h6 {
     order: 1;
   }
 
-  .footer p {
-    display: flex;
-    justify-content: flex-end;
-  }
-
   .footer .form {
     display: flex;
     justify-content: flex-end;
@@ -448,7 +517,7 @@ h6 {
 
   .redes {
     height: 20vh;
-    width: 20vw;
+    width: 30vw;
     display: flex;
     gap: 100px;
   }
